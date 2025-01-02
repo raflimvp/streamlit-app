@@ -24,9 +24,9 @@ st.markdown("""
 # Tombol prediksi
 if st.button("Prediksi Spesies"):
     # Memuat model, scaler, dan label encoder
-    svm_model = joblib.load('Supervised Learning/svm/svm_model_scaler.pkl')
-    scaler = joblib.load('Supervised Learning/svm/scaler.pkl')
-    le = joblib.load('Supervised Learning/svm/label_encoder_scaler.pkl')
+    svm_model = joblib.load('svm_model_scaler.pkl')
+    scaler = joblib.load('scaler.pkl')
+    le = joblib.load('label_encoder_scaler.pkl')
 
     # Scaling data input
     scaled_input = scaler.transform([[length, weight, ratio]])
